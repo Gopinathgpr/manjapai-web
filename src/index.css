@@ -1,13 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'Poppins', sans-serif;
 }
+
+:root {
+  --background: #FFC605;
+}
+
+[data-theme='dark'] {
+  --background: #15cc44;
+}
+
+[data-theme='lighter'] {
+  --background: #729ec9;
+}
+
+:root {
+
+  --text-primary: 37px;
+  --text-sub-primary: 25px;
+  --text-secondary: 16px;
+  --text-details: 14px;
+  --text-menu: 15px;
+
+}
+
+[text-theme='small'] {
+
+  --text-primary: 35px;
+  --text-sub-primary: 23px;
+  --text-secondary: 14px;
+  --text-details: 12px;
+  --text-menu: 14px;
+
+}
+
+[text-theme='high'] {
+
+  --text-primary: 40px;
+  --text-sub-primary: 27px;
+  --text-secondary: 18px;
+  --text-details: 16px;
+  --text-menu: 16px;
+
+}
+
+:root {
+
+ opacity: 1;
+
+}
+
+[language-theme='Tamil'] {
+  
+  opacity: 1;
+  /* --text-primary: 25px;
+  --text-sub-primary: 20px;
+  --text-secondary: 14px;
+  --text-details: 11px; */
+  --text-menu: 12px;
+}
+
+
+#root {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+/* :root {
+  
+  --text-primary: 27px;
+  --text-sub-primary: 20px;
+  --text-secondary: 14px;
+  --text-details: 10px;
+  
+}
+[text-tamil='tamilsmallcontent'] {
+  
+  --text-primary: 25px;
+  --text-sub-primary: 18px;
+  --text-secondary: 12px;
+  --text-details: 8px;
+  
+}
+[text-tamil='tamilhighcontent'] {
+  
+  --text-primary: 30px;
+  --text-sub-primary: 22px;
+  --text-secondary: 16px;
+  --text-details: 12px;
+  
+} */

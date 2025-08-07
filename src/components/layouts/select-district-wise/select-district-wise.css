@@ -1,0 +1,142 @@
+.district-total-section {
+    padding: 20px 0;
+}
+
+.district-header {
+    font-weight: 600;
+    font-size: var(--text-primary);
+    line-height: 56px;
+    color: #222222;
+    text-align: center;
+    margin-bottom: 25px;
+
+}
+
+.district-sub-header {
+    font-weight: 600;
+    font-size: var(--text-primary);
+    line-height: 56px;
+    color: #222222;
+}
+
+.district-header-highlight {
+    font-weight: 600;
+    padding-right: 10px;
+    font-size: var(--text-primary);
+    line-height: 56px;
+    color: var(--background);
+
+}
+
+.full-card-district {
+    background-color: transparent;
+}
+
+.district-details {
+    font-weight: 400;
+    font-size: var(--text-secondary);
+    line-height: 24px;
+    text-align: justify;
+    color: #666666;
+}
+
+.district-button {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.district-btn {
+    font-size: var(--text-secondary);
+    line-height: 24px;
+    color: #0F64B9;
+    background-color: var(--background);
+    border-radius: 8px;
+    padding: 10px 10px;
+    border: none;
+}
+
+.district-search {
+    width: 20%;
+}
+
+.district-search-title {
+    font-weight: 600;
+    font-size: var(--text-secondary);
+    line-height: 24px;
+    color: #444444;
+}
+
+.district-count-details {
+    font-weight: 400;
+    font-size: var(--text-secondary);
+    line-height: 24px;
+    text-align: left;
+    color: #666666;
+
+}
+
+.district-count {
+    font-weight: 600;
+    font-size: var(--text-primary);
+    line-height: 40px;
+    text-align: left;
+    color: #0F64B9;
+}
+
+.full-district-count1 {
+    margin-top: 30px;
+}
+.active{
+    fill: var(--background) !important;
+}
+.active1{
+    fill: #5C9DF2 !important;
+}
+
+@media screen and (max-width: 768px) {
+    .district-search {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .district-total-section {
+        padding: 20px 10px 20px 20px;
+    }
+
+    .district-header {
+        font-size: var(--text-sub-primary);
+        margin-bottom: 10px;
+    }
+
+    .district-header-highlight {
+        font-size: var(--text-sub-primary);
+    }
+
+    .district-search-title {
+        text-align: center;
+    }
+
+    .district-count {
+        font-size: var(--text-primary);
+        line-height: 36px;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+    .district-count-details {
+        font-size: var(--text-secondary);
+        text-align: center;
+    }
+
+    .district-details {
+        font-size: var(--text-secondary);
+    }
+
+    .full-district-count1 {
+        margin-top: 0;
+    }
+
+    .district-sub-header {
+        font-size: var(--text-sub-primary);
+    }
+}

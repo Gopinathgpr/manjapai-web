@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -5,6 +6,32 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.selectdesign {
+  padding: 4px 20px 4px 20px;
+  background-color: rgb(255, 255, 255);
+  width: 240px;
+  -webkit-box-align: center;
+  align-items: center;
+  cursor: default;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  min-height: 30px;
+  transition: all 100ms ease 0s;
+  background-color: rgb(255, 255, 255);
+  border-color: rgb(204, 204, 204);
+  border-radius: 4px;
+  border-width: 1px;
+  box-sizing: border-box;
+}
+.__react_component_tooltip.show {
+  opacity: 0.9;
+  margin-top: 0px;
+  margin-left: 0px;
+  visibility: visible;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -36,3 +63,20 @@
     transform: rotate(360deg);
   }
 }
+
+@media screen and (max-width: 768px) {
+  .formobileonly{
+    padding: 0 !important;
+  }
+  .tamil-content{
+    display: none !important;
+  }
+}
+@media screen and (min-width : 1441px) {
+   
+  .container {
+      width: 88%;
+  }
+}
+
+

@@ -1,0 +1,223 @@
+.information-bg-image {
+    width: 100%;
+}
+
+.information-header {
+    position: relative;
+}
+
+.information-head-line {
+    font-weight: 600;
+    font-size: var(--text-primary);
+    line-height: 20px;
+    text-align: center;
+    color: #F0F0F2;
+    padding-top: 72px;
+    padding-bottom: 40px;
+}
+
+.information-title-card {
+    position: absolute;
+    top: 0;
+    transform: none;
+}
+
+.title-card-navigation {
+    background-color: #FFF;
+    border-radius: 4px;
+    color: #333333;
+}
+
+.information-title-card-navigation {
+    display: inline-flex;
+    list-style: none;
+    margin-bottom: 0rem;
+    padding-left: 1rem;
+    padding-right: 0rem;
+}
+
+.information-title-highlighter {
+    font-size: 15px;
+    padding: 20px 50px;
+}
+
+.information-title-highlighter-active {
+    font-size: 15px;
+    padding: 10px 5px;
+}
+
+.information-active-btn {
+    background-color: var(--background);
+    color: #265573;
+    border-radius: 6px;
+    padding: 10px 18px;
+    font-weight: 500;
+}
+
+.information-btn {
+    background-color: transparent;
+    color: #333333;
+    border-radius: 6px;
+    padding: 10px 0px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.govt-notice-content-section {
+    padding: 50px 0;
+}
+
+.govt-notice-content-title {
+    text-align: center;
+    font-size: var(--text-sub-primary);
+    color: #265573;
+}
+
+.govt-notice-notification {
+    color: #0F64B9;
+    padding-left: 20px;
+    text-decoration: none;
+}
+
+.accordion-item {
+    background-color: #fff;
+    border: none;
+    margin-bottom: 20px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.15);
+    border-radius: 10px !important;
+}
+
+:focus {
+    outline: 0 !important;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0) !important;
+}
+
+.accordion-button {
+    font-weight: 500;
+    font-size: var(--text-sub-primary);
+    line-height: 28px;
+    color: #0F64B9;
+    border-radius: 10px !important;
+}
+
+.govt-notice-content {
+    font-size: var(--text-secondary);
+}
+
+.statutory-department-content-section {
+    padding: 50px 0;
+}
+
+.statutory-notification {
+    color: #0F64B9;
+    text-decoration: none;
+    margin-bottom: 15px;
+    font-size: var(--text-secondary);
+}
+
+.statutory-content {
+    margin-bottom: 0;
+    margin-top: 15px;
+    font-size: var(--text-secondary);
+}
+
+.important-links-content-section {
+    padding: 50px 0;
+}
+
+.links-table-s-no {
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .information-head-line {
+        padding: 10px;
+        font-size: var(--text-sub-primary);
+        line-height: 22px;
+        margin-bottom: 0;
+    }
+
+    .accordion-item {
+        margin-left: 10px;
+    }
+
+    .important-links-content-section {
+        padding: 20px 0 20px 10px;
+    }
+
+    .govt-notice-content-section {
+        padding: 20px 0 20px 10px;
+    }
+
+    .accordion-button {
+        font-size: 16px;
+        line-height: 28px;
+    }
+
+    .statutory-content {
+        font-size: 14px;
+    }
+
+    .statutory-notification {
+        font-size: 14px;
+    }
+
+    .govt-notice-content {
+        font-size: 14px;
+        display: inline-grid;
+    }
+
+    .govt-notice-notification {
+        font-size: 14px;
+        padding: 10px 0 0 0;
+    }
+}
+
+@media only screen and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 1) and (min-device-width : 768px) and (max-device-width : 1007px) {
+    .information-head-line {
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+
+    .information-title-highlighter-active {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .information-title-highlighter {
+        font-size: 12px;
+        text-align: center;
+        padding: 20px 43px;
+    }
+}
+
+@media only screen and (min-device-width : 1008px) and (max-device-width: 1024px) {
+    .information-head-line {
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+
+    .information-title-highlighter-active {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .information-title-highlighter {
+        font-size: 12px;
+        text-align: center;
+        padding: 20px 43px;
+    }
+}
+
+@media only screen and (min-device-width : 1025px) and (max-device-width: 1366px) {
+    .information-head-line {
+        padding-top: 35px;
+        padding-bottom: 20px;
+    }
+
+    .information-title-highlighter {
+        font-size: 12px;
+        text-align: center;
+        padding: 20px 43px;
+    }
+}

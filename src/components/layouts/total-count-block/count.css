@@ -1,0 +1,62 @@
+.total-section {
+    padding: 30px 0;
+    background-color: #F4F8FB;
+}
+
+.total-count-card {
+    display: inline-flex;
+    padding: 0 0 0 75px;
+}
+
+.count-logo {
+    width: 65px;
+    height: 65px;
+    margin-top: 25px;
+}
+
+.count-display {
+    display: inline;
+    padding: 20px 50px 20px 15px;
+}
+
+.count-value {
+    font-size: var(--text-primary);
+    line-height: 40px;
+    color: #0F64B9;
+    font-weight: 600;
+}
+
+.count-details {
+    font-size: var(--text-secondary);
+    line-height: 24px;
+    color: #666666;
+    font-weight: 400;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+
+    .total-count-card {
+        padding: 0 40px;
+    }
+
+    .count-value {
+        font-size: var(--text-sub-primary);
+        margin-bottom: 0;
+    }
+
+    .count-details {
+        font-size: var(--text-secondary);
+    }
+
+    .count-display {
+        padding: 20px 15px 20px 15px;
+    }
+
+    .count-logo {
+        width: 50px;
+        height: 50px;
+        margin-top: 25px;
+    }
+
+}

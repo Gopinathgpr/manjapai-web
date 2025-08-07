@@ -1,0 +1,88 @@
+.machine-total-section {
+    padding: 30px 0;
+    background-color: #F4F8FB;
+}
+
+.machine-header {
+    font-weight: 600;
+    font-size: var(--text-primary);
+    line-height: 56px;
+    color: #222222;
+    margin-bottom: 25px;
+
+}
+
+.machine-header-highlight {
+    font-weight: 600;
+    padding-right: 10px;
+    font-size: var(--text-primary);
+    line-height: 56px;
+    color: var(--background);
+
+}
+
+.full-card-machine {
+    background-color: transparent;
+    padding-right: 50px;
+}
+
+.machine-details {
+    font-weight: 400;
+    font-size: var(--text-secondary);
+    line-height: 24px;
+    text-align: justify;
+    color: #666666;
+}
+
+.machine-button {
+    margin-top: 30px;
+}
+
+.manjapai-machine-video {
+    width: 100%;
+    opacity: 0.8;
+}
+
+.ven-machine-btn {
+    font-size: var(--text-secondary);
+    line-height: 24px;
+    color: #0F64B9;
+    background-color: var(--background);
+    border-radius: 8px;
+    padding: 10px 10px;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .machine-header {
+        font-size: var(--text-sub-primary);
+        margin-bottom: 0;
+    }
+
+    .machine-header-highlight {
+        font-size: var(--text-sub-primary);
+        margin-bottom: 0;
+    }
+
+    .machine-details {
+        font-size: var(--text-secondary);
+    }
+
+    .ven-machine-btn {
+        font-size: var(--text-details);
+    }
+
+    .machine-button {
+        text-align: center;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .full-card-machine {
+        padding-right: 0;
+    }
+
+    .machine-total-section {
+        padding: 20px 10px 20px 20px;
+    }
+}

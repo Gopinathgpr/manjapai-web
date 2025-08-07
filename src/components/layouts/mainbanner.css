@@ -1,0 +1,164 @@
+.banner {
+    width: 100%;
+    /* display: block; */
+    height: 700px;
+
+}
+.modal-title{
+    font-size: var(--text-sub-primary);
+    font-weight: 600;
+    color: var(--background);
+}
+.notification-content{
+    font-size: var(--text-secondary);
+    font-weight: 500;
+    color: var(--background);
+}
+.notification-image{
+    width: 100%;
+}
+.popup-btn{
+    display: none;
+}
+.smallbanner {
+    width: 100%;
+}
+
+.highlight-marquee {
+    position: relative;
+}
+
+.banner-title-bgcolor {
+    background: linear-gradient(90deg, rgba(0,0,0,0.87718837535014) 0%, rgba(0,0,0,0.8267682072829132) 34%, rgba(0,0,0,0.7371323529411764) 56%, rgba(0,0,0,0.6194852941176471) 72%, rgba(0,0,0,0.3253676470588235) 88%, rgba(0,0,0,0) 100%);
+   width: 70%;
+    height: 130px;
+    position: absolute;
+    top: 50%;
+    padding: 15px 0;
+}
+
+.banner-title {
+    color: #FFC605;
+    font-size: var(--text-primary);
+    font-weight: 800;
+    padding-left: 50px;
+}
+.banner-content{
+    color: #FFF;
+    font-size: var(--text-sub-primary);
+    font-weight: 400;
+    padding-left: 50px;
+}
+
+.pages-layouts {
+    background-color: var(--background);
+    color: black;
+    padding: 5px 10px;
+    position: absolute;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.marquee-text {
+    font-size: var(--text-secondary);
+    line-height: 24px;
+    color: #000;
+    font-weight: 500;
+    padding: 8px;
+    background-color: #FFC605;
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 786px) {
+    .smalldeviceonly {
+        display: block !important
+    }
+
+    .largedeviceonly {
+        display: none !important
+    }
+
+    .banner {
+        width: 100%;
+        /* display: block; */
+        height: 500px;
+    
+    }
+    .highlight-marquee-mobile {
+        position: relative;
+    }
+    .banner-title-bgcolor {
+        width: 100%;
+        height: 120px;
+        position: absolute;
+        top: 45%;
+        padding: 15px 20px;
+    }
+    
+    .banner-title {
+        color: #FFC605;
+        font-size: var(--text-sub-primary);
+        font-weight: 600;
+        padding-left: 10px;
+    }
+    .banner-content{
+        color: #FFF;
+        font-size: var(--text-secondary);
+        font-weight: 400;
+        padding-left: 10px;
+    }
+
+    .marquee-text-mobile {
+        /* position: absolute; */
+        font-size: var(--text-details);
+        line-height: 24px;
+        color: #000;
+        /* top: 88%; */
+        padding: 4px 8px;
+        /* font-size: 12px; */
+        background-color: #FFC605;
+        width: 100%;
+    }
+
+    .marqueeLink {
+        text-decoration: none;
+        color: #fff;
+        padding-right: 25px;
+    }
+}
+
+@media only screen and (min-width: 786px) {
+    .smalldeviceonly {
+        display: none !important
+    }
+
+    .largedeviceonly {
+        display: block !important
+    }
+
+}
+
+@media only screen and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 1) and (min-device-width : 768px) and (max-device-width : 1007px) {
+    /* .marquee-text {
+        top: 90%;
+    } */
+}
+
+@media only screen and (min-device-width : 1008px) and (max-device-width: 1024px) {
+    /* .marquee-text {
+        top: 90%;
+    } */
+}
+
+@media only screen and (min-device-width : 1025px) and (max-device-width: 1366px) {
+    /* .marquee-text {
+        top: 92%;
+    } */
+}
+
+.marqueeLink {
+    text-decoration: none;
+    color: #fff;
+}

@@ -1,0 +1,84 @@
+.animation-total-section {
+    padding: 30px 0;
+}
+
+.animation-header {
+    font-weight: 600;
+    font-size: var(--text-primary);
+    line-height: 56px;
+    color: #222222;
+
+}
+
+.animation-header-highlight {
+    font-weight: 600;
+    padding-right: 10px;
+    font-size: var(--text-primary);
+    line-height: 56px;
+    color: var(--background);
+
+}
+
+.full-card-animation {
+    background-color: transparent;
+    padding: 90px 0px 0px 20px;
+}
+
+.pcb-tn-platics-video {
+    width: 100%;
+}
+
+.animation-details {
+    font-weight: 400;
+    font-size: var(--text-secondary);
+    line-height: 24px;
+    text-align: justify;
+    color: #666666;
+}
+
+.animation-button {
+    margin-top: 30px;
+}
+
+.animation-btn {
+    font-size: var(--text-secondary);
+    line-height: 24px;
+    color: #222222;
+    background-color: var(--background);
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: none;
+}
+
+@media screen and (max-width: 768px) {
+    .full-card-animation {
+        padding: 0px 15px;
+    }
+
+    .animation-total-section {
+        padding: 20px 10px;
+    }
+
+    .animation-header {
+        font-size: var(--text-sub-primary);
+        line-height: 34px;
+    }
+
+    .animation-header-highlight {
+        font-size: var(--text-sub-primary);
+        line-height: 34px;
+    }
+
+    .animation-details {
+        font-size: var(--text-secondary);
+    }
+
+    .animation-button {
+        text-align: center;
+    }
+
+    .animation-btn {
+        font-size: var(--text-details);
+        padding: 10px 20px;
+    }
+}

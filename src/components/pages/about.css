@@ -1,0 +1,459 @@
+.about-bg-image {
+    width: 100%;
+}
+
+.about-header {
+    position: relative;
+}
+
+.about-head-line {
+    font-weight: 600;
+    font-size: var(--text-primary);
+    line-height: 20px;
+    text-align: center;
+    color: #F0F0F2;
+    padding-top: 72px;
+    padding-bottom: 40px;
+}
+
+.about-title-card {
+    position: absolute;
+    top: 0;
+    transform: none;
+}
+
+.title-card-navigation {
+    background-color: #FFF;
+    border-radius: 4px;
+    color: #333333;
+}
+
+.about-title-card-navigation {
+    display: inline-flex;
+    list-style: none;
+    margin-bottom: 0rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.about-title-highlighter {
+    font-size: 13px;
+    padding: 20px 9px;
+}
+
+.about-title-highlighter-active {
+    font-size: 13px;
+    padding: 10px 0;
+}
+
+.about-active-btn {
+    background-color: var(--background);
+    color: #265573;
+    border-radius: 6px;
+    padding: 10px 18px;
+    font-weight: 500;
+}
+
+.about-btn {
+    background-color: transparent;
+    color: #333333;
+    border-radius: 6px;
+    padding: 10px 0px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.honorable-content-section {
+    padding: 50px 0;
+}
+
+.honorable-image {
+    width: 100%;
+    padding: 25px;
+}
+
+.honorable-content-details {
+    font-size: var(--text-secondary);
+    padding: 30px 15px;
+    font-weight: 700;
+    color: #333333;
+    line-height: 34px;
+}
+
+.honorable-image-signature {
+    width: 100%;
+    text-align: center;
+    padding: 20px 250px;
+}
+
+.honorable-content-details::before {
+    content: "";
+    border-color: transparent var(--background);
+    border-style: solid;
+    border-width: 0.45em 0 0.45em 0.55em;
+    display: block;
+    height: 0;
+    width: 0;
+    left: -1.5em;
+    top: 1.2em;
+    position: relative;
+}
+
+.honorable-content-details::marker {
+    content: "";
+}
+
+
+.honorable-content-list {
+    padding-left: 1rem;
+}
+
+.introduction-content-section {
+    padding: 50px 0;
+}
+
+.introduction-details {
+    font-weight: 400;
+    font-size: var(--text-secondary);
+    line-height: 40px;
+    text-align: justify;
+    color: #333333;
+}
+
+.info-image-1 {
+    width: 100%;
+    padding-top: 150px;
+}
+
+.info-image-2 {
+    width: 100%;
+    padding-top: 75px;
+}
+
+.info-image-3 {
+    width: 100%;
+}
+
+.story-content-section {
+    padding: 50px 0;
+}
+
+.story-content-title {
+    text-align: center;
+    font-size: var(--text-primary);
+    color: #265573;
+}
+
+.mission-content-section {
+    padding: 50px 0;
+}
+
+.mission-content-title {
+    font-weight: 600;
+    font-size: var(--text-sub-primary);
+    line-height: 43px;
+    letter-spacing: 0.06em;
+    color: #265573;
+}
+
+.mission-content-details {
+    font-weight: 400;
+    font-size: var(--text-secondary);
+    line-height: 43px;
+    text-align: justify;
+    color: #333333;
+}
+
+.mission-image {
+    width: 100%;
+}
+
+.icon-color-fixed {
+    padding: 0px 7px 3px;
+    background-color: #265573;
+    color: #FFF;
+    border-radius: 100%;
+    font-size: 30px;
+}
+
+.milestone-content-section {
+    padding: 50px 0;
+}
+
+.milestone-image {
+    width: 100%;
+}
+
+.responsibilities-content-section {
+    padding: 50px 0;
+}
+
+.responsibilities-content-title {
+    font-weight: 600;
+    font-size: var(--text-sub-primary);
+    line-height: 36px;
+    color: #265573;
+    padding-bottom: 1rem;
+    margin-bottom: 0;
+}
+
+.responsibilities-content-details {
+    font-weight: 400;
+    font-size: var(--text-secondary);
+    line-height: 20px;
+    color: #333333;
+    padding-bottom: 2rem;
+    margin-bottom: 0;
+}
+
+.organisation-content-section {
+    padding: 50px 0;
+}
+
+.organisation-content-title {
+    text-align: center;
+    font-size: var(--text-sub-primary);
+    color: #265573;
+}
+
+.task-content-image {
+    width: 100%;
+}
+
+.task-content-section {
+    padding: 50px 0;
+}
+
+.task-content-deatils {
+    font-size: var(--text-secondary);
+    color: #333333;
+}
+
+.pdf-download-btn {
+    margin-top: 50px;
+}
+
+.task-pdf-download-btn {
+    background-color: var(--background);
+    border-radius: 6px;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-size: var(--text-secondary);
+}
+
+@media screen and (max-width: 768px) {
+    .about-head-line {
+        padding: 10px;
+        font-size: 23px;
+        line-height: 22px;
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    .honorable-image-signature {
+        padding: 10px 120px;
+    }
+
+    .title-card-navigation {
+        display: none;
+    }
+
+    .honorable-content-section {
+        padding: 0 20px;
+    }
+
+    .honorable-content-details {
+        font-size: 14px;
+        padding: 0px;
+        text-align: justify;
+        color: #333333;
+    }
+
+    .honorable-image {
+        padding: 10px 50px;
+    }
+
+    .introduction-content-section {
+        padding: 10px 20px;
+    }
+
+    .introduction-details {
+        font-size: 14px;
+        line-height: 26px;
+    }
+
+    .info-image-1 {
+        padding: 15px 40px;
+    }
+
+    .info-image-2 {
+        padding-top: 15px;
+        display: none;
+    }
+
+    .info-image-3 {
+        padding: 15px 0;
+        display: none;
+    }
+
+    .mission-content-section {
+        padding: 20px;
+    }
+
+    .mission-content-title {
+        font-size: 25px;
+        line-height: 30px;
+        letter-spacing: 0em;
+    }
+
+    .icon-color-fixed {
+        padding: 0px 6px 4px;
+        font-size: 23px;
+    }
+
+    .mission-content-details {
+        font-size: 14px;
+        line-height: 26px;
+        text-align: justify;
+    }
+
+    .mission-image {
+        padding: 0px 30px 0 75px;
+    }
+
+    .milestone-content-section {
+        padding: 20px;
+    }
+
+    .responsibilities-content-section {
+        padding: 20px;
+    }
+
+    .responsibilities-content-title {
+        font-size: 20px;
+        line-height: 30px;
+        padding-bottom: 0.5rem;
+    }
+
+    .responsibilities-content-details {
+        font-size: 14px;
+        line-height: 20px;
+        padding-bottom: 1rem;
+    }
+
+    .task-content-section {
+        padding: 20px;
+    }
+
+    .pdf-download-btn {
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    .task-content-deatils {
+        font-size: 14px;
+    }
+
+    .task-pdf-download-btn {
+        font-size: 14px;
+    }
+
+}
+
+@media only screen and (orientation : landscape) and (-webkit-min-device-pixel-ratio: 1) and (min-device-width : 768px) and (max-device-width : 1007px) {
+    .about-head-line {
+        padding-top: 25px;
+        padding-bottom: 24px;
+    }
+
+    .honorable-image-signature {
+        width: 100%;
+        text-align: center;
+        padding: 20px 150px;
+    }
+
+    .about-title-highlighter-active {
+        font-size: 10px;
+    }
+
+    .about-active-btn {
+        background-color: var(--background);
+        padding: 7px 10px;
+        text-align: center;
+    }
+
+    .about-title-highlighter {
+        font-size: 10px;
+        padding: 15px 9px;
+        text-align: center;
+    }
+
+    
+}
+
+@media only screen and (min-device-width : 1008px) and (max-device-width: 1024px) {
+    .about-head-line {
+        padding-top: 25px;
+        padding-bottom: 24px;
+    }
+
+    .honorable-image-signature {
+        width: 100%;
+        text-align: center;
+        padding: 20px 150px;
+    }
+
+    .about-title-highlighter-active {
+        font-size: 10px;
+    }
+
+    .about-active-btn {
+        background-color: var(--background);
+        padding: 7px 10px;
+        text-align: center;
+    }
+
+    .about-title-highlighter {
+        font-size: 10px;
+        padding: 15px 9px;
+        text-align: center;
+    }
+
+    .title-card-navigation {
+        margin-right: 25px;
+    }
+}
+
+@media only screen and (min-device-width : 1025px) and (max-device-width: 1366px) {
+    .about-head-line {
+        padding-top: 35px;
+        padding-bottom: 20px;
+    }
+
+    .honorable-image-signature {
+        width: 100%;
+        text-align: center;
+        padding: 0px 200px 20px 200px;
+    }
+
+    .about-title-highlighter-active {
+        font-size: 12px;
+    }
+
+    .about-title-highlighter {
+        font-size: 11px;
+        padding: 15px 9px;
+        text-align: center;
+    }
+
+    .title-card-navigation {
+        margin-right: 25px;
+    }
+
+    .about-active-btn {
+        background-color: var(--background);
+        padding: 7px 15px;
+        text-align: center;
+    }
+}
