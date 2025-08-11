@@ -726,7 +726,7 @@ function District({ className, ...rest }) {
                   <ComposableMap
                     projectionConfig={{ scale }}
                     width={300}
-                    height={500}
+                    height={400}
                   >
                     <ZoomableGroup
                       zoom={4.4}

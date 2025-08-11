@@ -1,98 +1,116 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "./mainbanner.css";
 import { Link } from "react-router-dom";
-import API_URL from "../../Config/api";
-import Slider from "react-slick";
 import Marquee from "react-fast-marquee";
+import { useGetBannersMutation, useGetMarqueesMutation } from "../../Api/BannerApi/bannerApi";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, EffectFade } from 'swiper/modules';
+
+
 function ImageSlider() {
   const dataFetchedRef = useRef(false);
+  const [banner, setBanner] = useState([]);
+  const [marquee, setMarquee] = useState([]);
+  const [bannerError, setBannerError] = useState(null);
+  const [marqueeError, setMarqueeError] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  const [getBanners] = useGetBannersMutation();
+  const [getMarquees] = useGetMarqueesMutation();
+
   useEffect(() => {
     if (dataFetchedRef.current) return;
     dataFetchedRef.current = true;
-    marqueeList();
-    bannerList();
+    setIsLoading(true);
+
+    Promise.all([
+      getBanners().unwrap().catch((err) => {
+        setBannerError(err?.error || "Failed to load banners");
+        return null;
+      }),
+      getMarquees().unwrap().catch((err) => {
+        setMarqueeError(err?.error || "Failed to load marquees");
+        return null;
+      }),
+    ]).then(([bannerRes, marqueeRes]) => {
+      if (bannerRes?.status === 200) {
+        setBanner(bannerRes.data);
+      }
+      if (marqueeRes?.status === 200) {
+        setMarquee(marqueeRes.data);
+      }
+      setIsLoading(false);
+    });
   }, []);
 
-  const [banner, setBanner] = useState([]);
-  const [marquee, setMarquee] = useState([]);
+  if (isLoading) {
+    return <div className="loading-text">Loading banners...</div>;
+  }
 
-  const bannerList = () => {
-    const apiUrl = API_URL + "HomeApi/banner";
-    const myHeaders = new Headers();
-    var raw = JSON.stringify({
-      token: "MeendumManjappai",
-    });
-    const options = {
-      method: "POST",
-      body: raw,
-      headers: myHeaders,
-      redirect: "follow",
-    };
-    fetch(apiUrl, options)
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          if (result.status === 200) {
-            console.log(result.data);
-            setBanner(result.data);
-          }
-        },
-        (error) => {}
-      );
-  };
-  const marqueeList = () => {
-    const apiUrl = API_URL + "HomeApi/marquee";
-    const myHeaders = new Headers();
-    var raw = JSON.stringify({
-      token: "MeendumManjappai",
-    });
-    const options = {
-      method: "POST",
-      body: raw,
-      headers: myHeaders,
-      redirect: "follow",
-    };
-    fetch(apiUrl, options)
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          if (result.status === 200) {
-            setMarquee(result.data);
-            console.log(result.data);
-          }
-        },
-        (error) => {}
-      );
-  };
+  if (bannerError || marqueeError) {
+    return (
+      <div className="error-text">
+        {bannerError && <p>Error loading banners: {bannerError}</p>}
+        {marqueeError && <p>Error loading marquees: {marqueeError}</p>}
+      </div>
+    );
+  }
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    pauseOnHover: false,
-    swipeToSlide: true,
-    autoplay: true,
-    speed: 100,
-    autoplaySpeed: 5000,
-    fade: true,
-    cssEase: "linear",
-  };
+  const renderMarquee = (deviceType) => (
+    <Marquee speed={deviceType === "mobile" ? 50 : 30} pauseOnHover direction="right" gradient={false}>
+      {marquee.map((item, index) => (
+        <div key={index} style={{ marginRight: deviceType === "mobile" ? "40px" : "50px" }}>
+          {localStorage.getItem("language") === "Tamil" ? (
+            <span>
+              {item.tamilmarqueeTitle || item.marqueeTitle}
+              &nbsp;&nbsp;
+              {item.marqueeLink && (
+                <Link className="marqueeLink" to={item.marqueeLink} target="_blank">
+                  இங்கே கிளிக் செய்யவும்
+                </Link>
+              )}
+            </span>
+          ) : (
+            <span>
+              {item.marqueeTitle}
+              &nbsp;&nbsp;
+              {item.marqueeLink && (
+                <Link className="marqueeLink" to={item.marqueeLink} target="_blank">
+                  Click Here
+                </Link>
+              )}
+            </span>
+          )}
+        </div>
+      ))}
+    </Marquee>
+  );
 
   return (
     <>
+      {/* Desktop */}
       <div className="largedeviceonly">
         <div className="highlight-marquee">
-          <Slider {...settings}>
-            {banner.map((banner, index) => (
-              <img
-                className="banner"
-                src={banner.filePath + banner.bannerdesktopImage}
-                alt="Slider"
-              />
+          <Swiper
+            modules={[Autoplay, EffectFade]}
+            autoplay={{ delay: 5000 }}
+            effect="fade"
+            loop={true}
+            speed={100}
+            fadeEffect={{ crossFade: true }}
+          >
+            {banner.map((b, index) => (
+              <SwiperSlide key={index}>
+                <img
+                  className="banner"
+                  src={b.filePath + b.bannerdesktopImage}
+                  alt={`Banner ${index + 1}`}
+                />
+              </SwiperSlide>
             ))}
-          </Slider>
-          <div className="banner-title-bgcolor">
+          </Swiper>
+
+          <div className="banner-title-bgcolor" style={{zIndex: 999}}>
             <div className="container formobileonly">
               <h3 className="banner-title">Meendum Manjappai</h3>
               <p className="banner-content">
@@ -101,67 +119,34 @@ function ImageSlider() {
             </div>
           </div>
         </div>
-        <div
-          className="marquee-text"
-          style={{overflow: "hidden" }}
-        >
-          <Marquee
-            speed={30}
-            pauseOnHover={true}
-            direction="right" // because reverse=true
-            gradient={false} // removes fading effect if you don't want it
-          >
-            {marquee.map((item, index) => (
-              <div key={index} style={{ marginRight: "50px" }}>
-                {localStorage.getItem("language") === "Tamil" ? (
-                  <span>
-                    {item.tamilmarqueeTitle !== ""
-                      ? item.tamilmarqueeTitle
-                      : item.marqueeTitle}
-                    &nbsp;&nbsp;
-                    {item.marqueeLink !== "" && (
-                      <Link
-                        className="marqueeLink"
-                        to={item.marqueeLink}
-                        target="_blank"
-                      >
-                        இங்கே கிளிக் செய்யவும்
-                      </Link>
-                    )}
-                  </span>
-                ) : (
-                  <span>
-                    {item.marqueeTitle}
-                    &nbsp;&nbsp;
-                    {item.marqueeLink !== "" && (
-                      <Link
-                        className="marqueeLink"
-                        to={item.marqueeLink}
-                        target="_blank"
-                      >
-                        Click Here
-                      </Link>
-                    )}
-                  </span>
-                )}
-              </div>
-            ))}
-          </Marquee>
+
+        <div className="marquee-text" style={{ overflow: "hidden" }}>
+          {renderMarquee("desktop")}
         </div>
       </div>
+
+      {/* Mobile */}
       <div className="smalldeviceonly">
         <div className="highlight-marquee-mobile">
-          <Slider {...settings}>
-            {banner.map((banner, index) => (
-              // <div>
-              <img
-                className="banner"
-                src={banner.filePath + banner.bannermobileImage}
-                alt="Slider"
-              />
-              // </div>
+          <Swiper
+            modules={[Autoplay, EffectFade]}
+            autoplay={{ delay: 5000 }}
+            effect="fade"
+            loop={true}
+            speed={100}
+            fadeEffect={{ crossFade: true }}
+          >
+            {banner.map((b, index) => (
+              <SwiperSlide key={index}>
+                <img
+                  className="banner"
+                  src={b.filePath + b.bannermobileImage}
+                  alt={`Banner ${index + 1}`}
+                />
+              </SwiperSlide>
             ))}
-          </Slider>
+          </Swiper>
+
           <div className="banner-title-bgcolor">
             <div className="container formobileonly">
               <h3 className="banner-title">Meendum Manjappai</h3>
@@ -171,55 +156,13 @@ function ImageSlider() {
             </div>
           </div>
         </div>
-        <div
-          className="marquee-text-mobile"
-          style={{ height: "25px", overflow: "hidden" }}
-        >
-          <Marquee
-            speed={50} // Equivalent to duration=15000 (adjust as needed)
-            pauseOnHover={true}
-            direction="right" // Because reverse={true}
-            gradient={false} // To keep it clean like your original
-          >
-            {marquee.map((item, index) => (
-              <div key={index} style={{ marginRight: "40px" }}>
-                {localStorage.getItem("language") === "Tamil" ? (
-                  <span>
-                    {item.tamilmarqueeTitle !== ""
-                      ? item.tamilmarqueeTitle
-                      : item.marqueeTitle}
-                    &nbsp;&nbsp;
-                    {item.marqueeLink !== "" && (
-                      <Link
-                        className="marqueeLink"
-                        to={item.marqueeLink}
-                        target="_blank"
-                      >
-                        இங்கே கிளிக் செய்யவும்
-                      </Link>
-                    )}
-                  </span>
-                ) : (
-                  <span>
-                    {item.marqueeTitle}
-                    &nbsp;&nbsp;
-                    {item.marqueeLink !== "" && (
-                      <Link
-                        className="marqueeLink"
-                        to={item.marqueeLink}
-                        target="_blank"
-                      >
-                        Click Here
-                      </Link>
-                    )}
-                  </span>
-                )}
-              </div>
-            ))}
-          </Marquee>
+
+        <div className="marquee-text-mobile" style={{ height: "25px", overflow: "hidden" }}>
+          {renderMarquee("mobile")}
         </div>
       </div>
     </>
   );
 }
+
 export default ImageSlider;
