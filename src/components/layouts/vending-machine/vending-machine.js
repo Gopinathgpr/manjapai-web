@@ -11,7 +11,7 @@ function Machine() {
   }, [fetchSection]);
 
   const language = localStorage.getItem("language");
-
+ 
   const cleanHtml = (html) => {
     return html
       ?.replaceAll(/<script>/gi, "")
@@ -39,6 +39,8 @@ function Machine() {
     filePath,
   } = data?.data || {};
 
+
+
   return (
     <div className="machine-total-section">
       <div className="container formobileonly">
@@ -51,24 +53,24 @@ function Machine() {
                     <h5 className="machine-header">
                       {tamilsectiontwoTitle || sectiontwoTitle}
                     </h5>
-                    <p className="animation-details">
+                    <div className="animation-details">
                       <div
                         dangerouslySetInnerHTML={{
                           __html: cleanHtml(tamilsectiontwoDescription || sectiontwoDescription),
                         }}
                       />
-                    </p>
+                    </div>
                   </>
                 ) : (
                   <>
                     <h5 className="machine-header">{sectiontwoTitle}</h5>
-                    <p className="animation-details">
+                    <div className="animation-details">
                       <div
                         dangerouslySetInnerHTML={{
                           __html: cleanHtml(sectiontwoDescription),
                         }}
                       />
-                    </p>
+                    </div>
                   </>
                 )}
               </>
@@ -77,12 +79,13 @@ function Machine() {
           <div className="col-lg-5 col-md-6 col-12">
             <video
               className="manjapai-machine-video"
-              src={filePath + sectiontwoImage}
+               src={`${filePath}${sectiontwoImage}`}
               muted
               autoPlay
               preload="auto"
               loop
             ></video>
+
           </div>
         </div>
       </div>

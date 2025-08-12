@@ -8,6 +8,8 @@ import { videosApi } from "./VideosApi/videosApi";
 import { galleryApi } from "./GalleryApi/galleryApi";
 import { departmentsApi } from "./DepartmentsApi/departmentsApi";
 import { awardsApi } from "./AwardsApi/awardsApi";
+import { footerApi } from "./FooterApi/footerApi";
+import { menuApi } from "./MenuApi/menuApi";
 
 
 
@@ -22,6 +24,8 @@ export const store = configureStore({
     [galleryApi.reducerPath]: galleryApi.reducer,
     [departmentsApi.reducerPath]: departmentsApi.reducer, 
     [awardsApi.reducerPath]: awardsApi.reducer,
+    [footerApi.reducerPath]: footerApi.reducer,
+    [menuApi.reducerPath]: menuApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware().concat([
@@ -34,6 +38,8 @@ export const store = configureStore({
         galleryApi.middleware,
         departmentsApi.middleware,
         awardsApi.middleware,
+        footerApi.middleware,
+        menuApi.middleware,
     ]),
    
 

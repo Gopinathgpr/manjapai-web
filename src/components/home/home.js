@@ -276,7 +276,7 @@ function Home() {
         <div
           className="modal fade"
           id="exampleModal"
-          tabindex="-1"
+          tabIndex="-1"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
         >
@@ -388,7 +388,7 @@ function Home() {
                   src={filePath + sectiononeImage}
                   muted
                   autoPlay={"autoplay"}
-                  preLoad="auto"
+                  preload="auto"
                   loop
                 ></video>
               </div>
@@ -405,7 +405,7 @@ function Home() {
                             <>{tamilsectiononeTitle}</>
                           )}
                         </h5>
-                        <p className="animation-details">
+                        <div className="animation-details">
                           {tamilsectiononeDescription === "" ? (
                             <div
                               dangerouslySetInnerHTML={{
@@ -429,12 +429,12 @@ function Home() {
                               }}
                             />
                           )}
-                        </p>
+                        </div>
                       </>
                     ) : (
                       <>
                         <h5 className="animation-header">{sectiononeTitle}</h5>
-                        <p className="animation-details">
+                        <div className="animation-details">
                           <div
                             dangerouslySetInnerHTML={{
                               __html: sectiononeDescription
@@ -445,7 +445,7 @@ function Home() {
                                 .replaceAll(/Alert/gi, ""),
                             }}
                           />
-                        </p>
+                        </div>
                       </>
                     )}
                   </>
@@ -497,7 +497,7 @@ function Home() {
         <div
           className="modal fade"
           id="exampleModal1"
-          tabindex="-1"
+          tabIndex="-1"
           aria-labelledby="exampleModalLabel"
           aria-hidden="true"
         >
@@ -537,7 +537,7 @@ function Home() {
                     src={sectionthreefilePath + sectionthreeImage}
                     muted
                     autoPlay={"autoplay"}
-                    preLoad="auto"
+                    preload="auto"
                     loop
                   ></video>
                 ) : (

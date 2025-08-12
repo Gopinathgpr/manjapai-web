@@ -9,6 +9,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "react-tooltip/dist/react-tooltip.css";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/autoplay";
 import 'swiper/css/effect-fade';
 import { Provider } from "react-redux";
 import { store } from "./Api/store";

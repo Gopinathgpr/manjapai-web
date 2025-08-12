@@ -385,24 +385,19 @@ function District({ className, ...rest }) {
             value={districtName}
             onChange={districtName_change}
           >
-            {districtwise.map((districtwise, index) => (
-              <>
-                {" "}
-                {localStorage.getItem("language") === "Tamil" ? (
-                  <option value={districtwise.districtName}>
-                    {districtwise.tamildistrictName === "" ? (
-                      <>{districtwise.districtName}</>
-                    ) : (
-                      <>{districtwise.tamildistrictName}</>
-                    )}
-                  </option>
-                ) : (
-                  <option value={districtwise.districtName}>
-                    {districtwise.districtName}
-                  </option>
-                )}
-              </>
-            ))}
+            {districtwise.map((district, index) =>
+              localStorage.getItem("language") === "Tamil" ? (
+                <option key={index} value={district.districtName}>
+                  {district.tamildistrictName === ""
+                    ? district.districtName
+                    : district.tamildistrictName}
+                </option>
+              ) : (
+                <option key={index} value={district.districtName}>
+                  {district.districtName}
+                </option>
+              )
+            )}
           </select>
         </div>
         <div className="row">
@@ -669,7 +664,7 @@ function District({ className, ...rest }) {
                         <>{tamildistrictName}</>
                       )}
                     </h5>
-                    <p className="district-details">
+                    <div className="district-details">
                       {tamildistrictDescription === "" ? (
                         <div
                           dangerouslySetInnerHTML={{
@@ -693,12 +688,12 @@ function District({ className, ...rest }) {
                           }}
                         />
                       )}
-                    </p>
+                    </div>
                   </>
                 ) : (
                   <>
                     <h5 className="district-sub-header">{districtName}</h5>
-                    <p className="district-details">
+                    <div className="district-details">
                       <div
                         dangerouslySetInnerHTML={{
                           __html: districtDescription
@@ -709,7 +704,7 @@ function District({ className, ...rest }) {
                             .replaceAll(/Alert/gi, ""),
                         }}
                       />
-                    </p>
+                    </div>
                   </>
                 )}
               </>
@@ -728,16 +723,12 @@ function District({ className, ...rest }) {
                     width={300}
                     height={400}
                   >
-                    <ZoomableGroup
-                      zoom={4.4}
-                      center={[78.25, 10.8]}
-                      disablePanning
-                    >
+                    <ZoomableGroup zoom={4.4} center={[78.25, 10.8]}>
                       <Geographies geography={MAP_JSON}>
                         {({ geographies }) =>
                           geographies.map((geography, i) => (
                             <Geography
-                              key={geography.properties.NAME}
+                              key={i}
                               id={geography.properties.district}
                               onClick={() =>
                                 getdistict(`${geography.properties.district}`)

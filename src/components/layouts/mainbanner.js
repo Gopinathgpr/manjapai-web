@@ -5,6 +5,7 @@ import Marquee from "react-fast-marquee";
 import { useGetBannersMutation, useGetMarqueesMutation } from "../../Api/BannerApi/bannerApi";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, EffectFade } from 'swiper/modules';
+import BannerSkeleton from "../common/BannerSkeleton";
 
 
 function ImageSlider() {
@@ -44,7 +45,11 @@ function ImageSlider() {
   }, []);
 
   if (isLoading) {
-    return <div className="loading-text">Loading banners...</div>;
+    return (
+      <div className="largedeviceonly">
+        <BannerSkeleton width="100%" height={400} />
+      </div>
+    );
   }
 
   if (bannerError || marqueeError) {
