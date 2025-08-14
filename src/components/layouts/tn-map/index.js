@@ -11,7 +11,7 @@ import ReactTooltip from "react-tooltip";
 import { STYLES_MAP } from "./constants";
 import { MAP_JSON } from './constants';
 function Map() {
-  const scale = 1300;
+  const scale = 100;
   const [tooltipfunction, settooltipfunction] = useState(false);
   const entertooltip = () => {
     settooltipfunction(true)

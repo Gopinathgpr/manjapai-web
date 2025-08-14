@@ -132,7 +132,7 @@ function App() {
                                                 </Link>
                                             </div>
                                         </div>
-                                    </div>
+                                     </div>
                                 </div>
                                 <div className='col-lg-2 col-4'>
                                     <div className="top-header-space">

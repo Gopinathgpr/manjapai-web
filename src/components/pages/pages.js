@@ -16,10 +16,7 @@ import { FcTimeline } from "react-icons/fc";
 import { MdOutlineArrowForward, MdLocationOn, MdMail } from "react-icons/md";
 import $ from "jquery";
 import { AiOutlineCalendar } from "react-icons/ai";
-import {
-  BsFillPersonFill,
-  BsChatLeftDotsFill,
-} from "react-icons/bs";
+import { BsFillPersonFill, BsChatLeftDotsFill } from "react-icons/bs";
 import { FaMobileAlt, FaFileUpload } from "react-icons/fa";
 import { TiLocationArrow } from "react-icons/ti";
 import API_URL from "../../Config/api";
@@ -746,8 +743,7 @@ function Layouts() {
             }));
             setInputs((values) => ({
               ...values,
-              tamilpageShortdescription:
-                result.data.tamilpageShortdescription,
+              tamilpageShortdescription: result.data.tamilpageShortdescription,
             }));
             setInputs((values) => ({
               ...values,
@@ -915,8 +911,7 @@ function Layouts() {
             }));
             setInputs((values) => ({
               ...values,
-              tamiltimelineDescription:
-                result.data.tamiltimelineDescription,
+              tamiltimelineDescription: result.data.tamiltimelineDescription,
             }));
             setInputs((values) => ({
               ...values,
@@ -1033,8 +1028,7 @@ function Layouts() {
             }));
             setInputs((values) => ({
               ...values,
-              tamilblogShortdescription:
-                result.data.tamilblogShortdescription,
+              tamilblogShortdescription: result.data.tamilblogShortdescription,
             }));
             setInputs((values) => ({
               ...values,
@@ -1127,8 +1121,7 @@ function Layouts() {
               }));
               setInputs((values) => ({
                 ...values,
-                tamilinternationalnewsTitle:
-                  result.beforedata.tamilnewsTitle,
+                tamilinternationalnewsTitle: result.beforedata.tamilnewsTitle,
               }));
               setInputs((values) => ({
                 ...values,
@@ -1146,8 +1139,7 @@ function Layouts() {
               }));
               setInputs((values) => ({
                 ...values,
-                internationalnewsDescription:
-                  result.beforedata.newsDescription,
+                internationalnewsDescription: result.beforedata.newsDescription,
               }));
               setInputs((values) => ({
                 ...values,
@@ -1314,8 +1306,7 @@ function Layouts() {
             }));
             setInputs((values) => ({
               ...values,
-              laststatenewsShortdescription:
-                result.data.newsShortdescription,
+              laststatenewsShortdescription: result.data.newsShortdescription,
             }));
             setInputs((values) => ({
               ...values,
@@ -1328,8 +1319,7 @@ function Layouts() {
             }));
             setInputs((values) => ({
               ...values,
-              laststatetamilnewsDescription:
-                result.data.tamilnewsDescription,
+              laststatetamilnewsDescription: result.data.tamilnewsDescription,
             }));
             setInputs((values) => ({
               ...values,
@@ -2107,9 +2097,7 @@ function Layouts() {
                         ) : (
                           <>
                             <li className="breadcrumb-item">
-                              <Link to=".">
-                                {inputs.categoryName}
-                              </Link>
+                              <Link to=".">{inputs.categoryName}</Link>
                             </li>
                             <li
                               className="breadcrumb-item active"
@@ -2216,7 +2204,8 @@ function Layouts() {
                 <div>
                   {inputs.pageoneLink !== "" ? (
                     <div className="pdf-download-btn">
-                      <a rel="noreferrer"
+                      <a
+                        rel="noreferrer"
                         href={inputs.pageoneLink}
                         className="task-pdf-download-btn"
                         target="_blank"
@@ -2231,7 +2220,8 @@ function Layouts() {
                   )}
                   {inputs.pageoneFile !== "" ? (
                     <div className="pdf-download-btn">
-                      <a rel="noreferrer"
+                      <a
+                        rel="noreferrer"
                         href={inputs.filePath + inputs.pageoneFile}
                         className="task-pdf-download-btn"
                         target="_blank"
@@ -2248,7 +2238,8 @@ function Layouts() {
                 <div>
                   {inputs.pagetwoLink !== "" ? (
                     <div className="pdf-download-btn">
-                      <a rel="noreferrer"
+                      <a
+                        rel="noreferrer"
                         href={inputs.pagetwoLink}
                         className="task-pdf-download-btn"
                         target="_blank"
@@ -2263,7 +2254,8 @@ function Layouts() {
                   )}
                   {inputs.pagetwoFile !== "" ? (
                     <div className="pdf-download-btn">
-                      <a rel="noreferrer"
+                      <a
+                        rel="noreferrer"
                         href={inputs.filePath + inputs.pagetwoFile}
                         className="task-pdf-download-btn"
                         target="_blank"
@@ -2272,7 +2264,6 @@ function Layouts() {
                           ? "(click to view full details)"
                           : "(click to view full details)"}
                       </a>
-
                     </div>
                   ) : (
                     ""
@@ -2384,9 +2375,7 @@ function Layouts() {
                             ) : (
                               <>
                                 <li className="breadcrumb-item">
-                                  <Link to=".">
-                                    {inputs.categoryName}
-                                  </Link>
+                                  <Link to=".">{inputs.categoryName}</Link>
                                 </li>
                                 <li
                                   className="breadcrumb-item active"
@@ -2565,7 +2554,8 @@ function Layouts() {
                   <div>
                     {inputs.pageoneLink !== "" ? (
                       <div className="pdf-download-btn">
-                        <a rel="noreferrer"
+                        <a
+                          rel="noreferrer"
                           href={inputs.pageoneLink}
                           className="task-pdf-download-btn"
                           target="_blank"
@@ -2580,7 +2570,8 @@ function Layouts() {
                     )}
                     {inputs.pageoneFile !== "" ? (
                       <div className="pdf-download-btn">
-                        <a rel="noreferrer"
+                        <a
+                          rel="noreferrer"
                           href={inputs.filePath + inputs.pageoneFile}
                           className="task-pdf-download-btn"
                           target="_blank"
@@ -2597,7 +2588,8 @@ function Layouts() {
                   <div>
                     {inputs.pagetwoLink !== "" ? (
                       <div className="pdf-download-btn">
-                        <a rel="noreferrer"
+                        <a
+                          rel="noreferrer"
                           href={inputs.pagetwoLink}
                           className="task-pdf-download-btn"
                           target="_blank"
@@ -2612,7 +2604,8 @@ function Layouts() {
                     )}
                     {inputs.pagetwoFile !== "" ? (
                       <div className="pdf-download-btn">
-                        <a rel="noreferrer"
+                        <a
+                          rel="noreferrer"
                           href={inputs.filePath + inputs.pagetwoFile}
                           className="task-pdf-download-btn"
                           target="_blank"
@@ -2678,9 +2671,7 @@ function Layouts() {
                         ) : (
                           <>
                             <li className="breadcrumb-item">
-                              <Link to=".">
-                                {inputs.categoryName}
-                              </Link>
+                              <Link to=".">{inputs.categoryName}</Link>
                             </li>
                             <li
                               className="breadcrumb-item active"
@@ -2799,7 +2790,8 @@ function Layouts() {
               <div>
                 {inputs.pageoneLink !== "" ? (
                   <div className="pdf-download-btn">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href={inputs.pageoneLink}
                       className="task-pdf-download-btn"
                       target="_blank"
@@ -2814,7 +2806,8 @@ function Layouts() {
                 )}
                 {inputs.pageoneFile !== "" ? (
                   <div className="pdf-download-btn">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href={inputs.filePath + inputs.pageoneFile}
                       className="task-pdf-download-btn"
                       target="_blank"
@@ -2831,7 +2824,8 @@ function Layouts() {
               <div>
                 {inputs.pagetwoLink !== "" ? (
                   <div className="pdf-download-btn">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href={inputs.pagetwoLink}
                       className="task-pdf-download-btn"
                       target="_blank"
@@ -2846,7 +2840,8 @@ function Layouts() {
                 )}
                 {inputs.pagetwoFile !== "" ? (
                   <div className="pdf-download-btn">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href={inputs.filePath + inputs.pagetwoFile}
                       className="task-pdf-download-btn"
                       target="_blank"
@@ -2962,9 +2957,7 @@ function Layouts() {
                         ) : (
                           <>
                             <li className="breadcrumb-item">
-                              <Link to=".">
-                                {inputs.categoryName}
-                              </Link>
+                              <Link to=".">{inputs.categoryName}</Link>
                             </li>
                             <li
                               className="breadcrumb-item active"
@@ -3057,7 +3050,8 @@ function Layouts() {
               <div>
                 {inputs.pageoneLink !== "" ? (
                   <div className="pdf-download-btn">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href={inputs.pageoneLink}
                       className="task-pdf-download-btn"
                       target="_blank"
@@ -3072,7 +3066,8 @@ function Layouts() {
                 )}
                 {inputs.pageoneFile !== "" ? (
                   <div className="pdf-download-btn">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href={inputs.filePath + inputs.pageoneFile}
                       className="task-pdf-download-btn"
                       target="_blank"
@@ -3089,7 +3084,8 @@ function Layouts() {
               <div>
                 {inputs.pagetwoLink !== "" ? (
                   <div className="pdf-download-btn">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href={inputs.pagetwoLink}
                       className="task-pdf-download-btn"
                       target="_blank"
@@ -3104,7 +3100,8 @@ function Layouts() {
                 )}
                 {inputs.pagetwoFile !== "" ? (
                   <div className="pdf-download-btn">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href={inputs.filePath + inputs.pagetwoFile}
                       className="task-pdf-download-btn"
                       target="_blank"
@@ -3220,9 +3217,7 @@ function Layouts() {
                         ) : (
                           <>
                             <li className="breadcrumb-item">
-                              <Link to=".">
-                                {inputs.categoryName}
-                              </Link>
+                              <Link to=".">{inputs.categoryName}</Link>
                             </li>
                             <li
                               className="breadcrumb-item active"
@@ -3442,7 +3437,8 @@ function Layouts() {
               <div>
                 {inputs.pageoneLink !== "" ? (
                   <div className="pdf-download-btn">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href={inputs.pageoneLink}
                       className="task-pdf-download-btn"
                       target="_blank"
@@ -3457,7 +3453,8 @@ function Layouts() {
                 )}
                 {inputs.pageoneFile !== "" ? (
                   <div className="pdf-download-btn">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href={inputs.filePath + inputs.pageoneFile}
                       className="task-pdf-download-btn"
                       target="_blank"
@@ -3474,7 +3471,8 @@ function Layouts() {
               <div>
                 {inputs.pagetwoLink !== "" ? (
                   <div className="pdf-download-btn">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href={inputs.pagetwoLink}
                       className="task-pdf-download-btn"
                       target="_blank"
@@ -3489,7 +3487,8 @@ function Layouts() {
                 )}
                 {inputs.pagetwoFile !== "" ? (
                   <div className="pdf-download-btn">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href={inputs.filePath + inputs.pagetwoFile}
                       className="task-pdf-download-btn"
                       target="_blank"
@@ -3551,9 +3550,7 @@ function Layouts() {
                         ) : (
                           <>
                             <li className="breadcrumb-item">
-                              <Link to=".">
-                                {inputs.categoryName}
-                              </Link>
+                              <Link to=".">{inputs.categoryName}</Link>
                             </li>
                             <li
                               className="breadcrumb-item active"
@@ -3650,7 +3647,8 @@ function Layouts() {
               <div>
                 {inputs.pageoneLink !== "" ? (
                   <div className="pdf-download-btn">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href={inputs.pageoneLink}
                       className="task-pdf-download-btn"
                       target="_blank"
@@ -3665,7 +3663,8 @@ function Layouts() {
                 )}
                 {inputs.pageoneFile !== "" ? (
                   <div className="pdf-download-btn">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href={inputs.filePath + inputs.pageoneFile}
                       className="task-pdf-download-btn"
                       target="_blank"
@@ -3682,7 +3681,8 @@ function Layouts() {
               <div>
                 {inputs.pagetwoLink !== "" ? (
                   <div className="pdf-download-btn">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href={inputs.pagetwoLink}
                       className="task-pdf-download-btn"
                       target="_blank"
@@ -3697,7 +3697,8 @@ function Layouts() {
                 )}
                 {inputs.pagetwoFile !== "" ? (
                   <div className="pdf-download-btn">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href={inputs.filePath + inputs.pagetwoFile}
                       className="task-pdf-download-btn"
                       target="_blank"
@@ -3827,9 +3828,7 @@ function Layouts() {
                         ) : (
                           <>
                             <li className="breadcrumb-item">
-                              <Link to=".">
-                                {inputs.categoryName}
-                              </Link>
+                              <Link to=".">{inputs.categoryName}</Link>
                             </li>
                             <li
                               className="breadcrumb-item active"
@@ -3991,9 +3990,7 @@ function Layouts() {
                         ) : (
                           <>
                             <li className="breadcrumb-item">
-                              <Link to=".">
-                                {inputs.categoryName}
-                              </Link>
+                              <Link to=".">{inputs.categoryName}</Link>
                             </li>
                             <li
                               className="breadcrumb-item active"
@@ -4125,7 +4122,8 @@ function Layouts() {
                             ""
                           )}
                           {cardtwoall.cardtwoLink !== "" ? (
-                            <a rel="noreferrer"
+                            <a
+                              rel="noreferrer"
                               href={cardtwoall.cardtwoLink}
                               className="recycle-btn"
                               target="_blank"
@@ -4139,7 +4137,8 @@ function Layouts() {
                             ""
                           )}
                           {cardtwoall.cardtwoFile !== "" ? (
-                            <a rel="noreferrer"
+                            <a
+                              rel="noreferrer"
                               href={
                                 cardtwoall.filePath + cardtwoall.cardtwoFile
                               }
@@ -4209,9 +4208,7 @@ function Layouts() {
                         ) : (
                           <>
                             <li className="breadcrumb-item">
-                              <Link to=".">
-                                {inputs.categoryName}
-                              </Link>
+                              <Link to=".">{inputs.categoryName}</Link>
                             </li>
                             <li
                               className="breadcrumb-item active"
@@ -4448,7 +4445,8 @@ function Layouts() {
                                 ""
                               )}
                               <div className="">
-                                {localStorage.getItem("language") === "Tamil" ? (
+                                {localStorage.getItem("language") ===
+                                "Tamil" ? (
                                   <>
                                     {cardtableall.tamiltableTitle === "" ? (
                                       <>{cardtableall.tableTitle}</>
@@ -4556,7 +4554,8 @@ function Layouts() {
                                 )}
                                 {cardtableall.tableoneLink !== "" &&
                                 cardtableall.onelinkPage === "" ? (
-                                  <a rel="noreferrer"
+                                  <a
+                                    rel="noreferrer"
                                     href={cardtableall.tableoneLink}
                                     className="recycle-pdf-download-btn"
                                     target="_blank"
@@ -4574,7 +4573,8 @@ function Layouts() {
                                 )}
                                 {cardtableall.tableoneFile !== "" &&
                                 cardtableall.tableoneLink === "" ? (
-                                  <a rel="noreferrer"
+                                  <a
+                                    rel="noreferrer"
                                     href={
                                       cardtableall.filePath +
                                       cardtableall.tableoneFile
@@ -4621,7 +4621,8 @@ function Layouts() {
                                 )}
                                 {cardtableall.tabletwoLink !== "" &&
                                 cardtableall.twolinkPage === "" ? (
-                                  <a rel="noreferrer"
+                                  <a
+                                    rel="noreferrer"
                                     href={cardtableall.tabletwoLink}
                                     className="recycle-pdf-download-btn"
                                     target="_blank"
@@ -4639,7 +4640,8 @@ function Layouts() {
                                 )}
                                 {cardtableall.tabletwoFile !== "" &&
                                 cardtableall.tabletwoLink === "" ? (
-                                  <a rel="noreferrer"
+                                  <a
+                                    rel="noreferrer"
                                     href={
                                       cardtableall.filePath +
                                       cardtableall.tabletwoFile
@@ -4715,9 +4717,7 @@ function Layouts() {
                         ) : (
                           <>
                             <li className="breadcrumb-item">
-                              <Link to=".">
-                                {inputs.categoryName}
-                              </Link>
+                              <Link to=".">{inputs.categoryName}</Link>
                             </li>
                             <li
                               className="breadcrumb-item active"
@@ -4951,7 +4951,8 @@ function Layouts() {
                                 )}
                                 {cardtableall.tableoneLink !== "" &&
                                 cardtableall.onelinkPage === "" ? (
-                                  <a rel="noreferrer"
+                                  <a
+                                    rel="noreferrer"
                                     href={cardtableall.tableoneLink}
                                     className="recycle-pdf-download-btn"
                                     target="_blank"
@@ -4969,7 +4970,8 @@ function Layouts() {
                                 )}
                                 {cardtableall.tableoneFile !== "" &&
                                 cardtableall.tableoneLink === "" ? (
-                                  <a rel="noreferrer"
+                                  <a
+                                    rel="noreferrer"
                                     href={
                                       cardtableall.filePath +
                                       cardtableall.tableoneFile
@@ -5046,9 +5048,7 @@ function Layouts() {
                         ) : (
                           <>
                             <li className="breadcrumb-item">
-                              <Link to=".">
-                                {inputs.categoryName}
-                              </Link>
+                              <Link to=".">{inputs.categoryName}</Link>
                             </li>
                             <li
                               className="breadcrumb-item active"
@@ -5169,9 +5169,9 @@ function Layouts() {
                             </h2>
                             <div
                               id={`collapse${index}`}
-                              className={
-                                `accordion-collapse collapse${index === 0 ? "show" : ""}`
-                              }
+                              className={`accordion-collapse collapse${
+                                index === 0 ? "show" : ""
+                              }`}
                               data-bs-parent="#accordionExample"
                               aria-labelledby={`heading${index}`}
                             >
@@ -5304,9 +5304,7 @@ function Layouts() {
                         ) : (
                           <>
                             <li className="breadcrumb-item">
-                              <Link to=".">
-                                {inputs.categoryName}
-                              </Link>
+                              <Link to=".">{inputs.categoryName}</Link>
                             </li>
                             <li
                               className="breadcrumb-item active"
@@ -5427,9 +5425,9 @@ function Layouts() {
                             </h2>
                             <div
                               id={`collapse${index}`}
-                              className={
-                                `accordion-collapse collapse ${index === 0 ? "show" : ""}`
-                              }
+                              className={`accordion-collapse collapse ${
+                                index === 0 ? "show" : ""
+                              }`}
                               data-bs-parent="#accordionExample"
                               aria-labelledby={`heading${index}`}
                             >
@@ -5561,9 +5559,7 @@ function Layouts() {
                         ) : (
                           <>
                             <li className="breadcrumb-item">
-                              <Link to=".">
-                                {inputs.categoryName}
-                              </Link>
+                              <Link to=".">{inputs.categoryName}</Link>
                             </li>
                             <li
                               className="breadcrumb-item active"
@@ -5742,9 +5738,7 @@ function Layouts() {
                         ) : (
                           <>
                             <li className="breadcrumb-item">
-                              <Link to=".">
-                                {inputs.categoryName}
-                              </Link>
+                              <Link to=".">{inputs.categoryName}</Link>
                             </li>
                             <li
                               className="breadcrumb-item active"
@@ -5841,9 +5835,25 @@ function Layouts() {
                           {localStorage.getItem("language") === "Tamil" ? (
                             <>
                               <h5 className="recent-blog-header">
-                                {event.tamileventTitle === '' ? 
-                                                <>{event.eventTitle.length > 60 ? `${event.eventTitle.substring(0, 60)}...` : event.eventTitle}</> : 
-                                                <>{event.tamileventTitle.length > 40 ? `${event.tamileventTitle.substring(0, 40)}...` : event.tamileventTitle}</>}
+                                {event.tamileventTitle === "" ? (
+                                  <>
+                                    {event.eventTitle.length > 60
+                                      ? `${event.eventTitle.substring(
+                                          0,
+                                          60
+                                        )}...`
+                                      : event.eventTitle}
+                                  </>
+                                ) : (
+                                  <>
+                                    {event.tamileventTitle.length > 40
+                                      ? `${event.tamileventTitle.substring(
+                                          0,
+                                          40
+                                        )}...`
+                                      : event.tamileventTitle}
+                                  </>
+                                )}
                               </h5>
                               <p className="recent-blog-details">
                                 {event.tamileventShortdescription === "" ? (
@@ -5856,7 +5866,9 @@ function Layouts() {
                           ) : (
                             <>
                               <h5 className="recent-blog-header">
-                              {event.eventTitle.length > 60 ? `${event.eventTitle.substring(0, 60)}...` : event.eventTitle}
+                                {event.eventTitle.length > 60
+                                  ? `${event.eventTitle.substring(0, 60)}...`
+                                  : event.eventTitle}
                               </h5>
                               <p className="recent-blog-details">
                                 {event.eventShortdescription}
@@ -5869,10 +5881,10 @@ function Layouts() {
                           <p className="event-block-calender">
                             {/* {event.eventDate} */}
                             {new Date(event.eventDate)
-                        .toLocaleDateString("en-GB")
-                        .slice(0, 10)
-                        .split("/")
-                        .join("-")}
+                              .toLocaleDateString("en-GB")
+                              .slice(0, 10)
+                              .split("/")
+                              .join("-")}
                           </p>
                         </div>
                         <div className="event-block-view-btn">
@@ -5944,9 +5956,7 @@ function Layouts() {
                         ) : (
                           <>
                             <li className="breadcrumb-item">
-                              <Link to=".">
-                                {inputs.categoryName}
-                              </Link>
+                              <Link to=".">{inputs.categoryName}</Link>
                             </li>
                             <li
                               className="breadcrumb-item active"
@@ -6606,9 +6616,7 @@ function Layouts() {
                         ) : (
                           <>
                             <li className="breadcrumb-item">
-                              <Link to=".">
-                                {inputs.categoryName}
-                              </Link>
+                              <Link to=".">{inputs.categoryName}</Link>
                             </li>
                             <li
                               className="breadcrumb-item active"
@@ -6692,7 +6700,8 @@ function Layouts() {
               <div>
                 {inputs.pageoneLink !== "" ? (
                   <div className="pdf-download-btn">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href={inputs.pageoneLink}
                       className="task-pdf-download-btn"
                       target="_blank"
@@ -6707,7 +6716,8 @@ function Layouts() {
                 )}
                 {inputs.pageoneFile !== "" ? (
                   <div className="pdf-download-btn">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href={inputs.filePath + inputs.pageoneFile}
                       className="task-pdf-download-btn"
                       target="_blank"
@@ -6724,7 +6734,8 @@ function Layouts() {
               <div>
                 {inputs.pagetwoLink !== "" ? (
                   <div className="pdf-download-btn">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href={inputs.pagetwoLink}
                       className="task-pdf-download-btn"
                       target="_blank"
@@ -6739,7 +6750,8 @@ function Layouts() {
                 )}
                 {inputs.pagetwoFile !== "" ? (
                   <div className="pdf-download-btn">
-                    <a rel="noreferrer"
+                    <a
+                      rel="noreferrer"
                       href={inputs.filePath + inputs.pagetwoFile}
                       className="task-pdf-download-btn"
                       target="_blank"
@@ -6924,9 +6936,7 @@ function Layouts() {
                         ) : (
                           <>
                             <li className="breadcrumb-item">
-                              <Link to=".">
-                                {inputs.categoryName}
-                              </Link>
+                              <Link to=".">{inputs.categoryName}</Link>
                             </li>
                             <li
                               className="breadcrumb-item active"
@@ -7118,9 +7128,7 @@ function Layouts() {
                         ) : (
                           <>
                             <li className="breadcrumb-item">
-                              <Link to=".">
-                                {inputs.categoryName}
-                              </Link>
+                              <Link to=".">{inputs.categoryName}</Link>
                             </li>
                             <li
                               className="breadcrumb-item active"
@@ -7320,9 +7328,7 @@ function Layouts() {
                         ) : (
                           <>
                             <li className="breadcrumb-item">
-                              <Link to=".">
-                                {inputs.categoryName}
-                              </Link>
+                              <Link to=".">{inputs.categoryName}</Link>
                             </li>
                             <li
                               className="breadcrumb-item active"
@@ -8215,9 +8221,7 @@ function Layouts() {
                         ) : (
                           <>
                             <li className="breadcrumb-item">
-                              <Link to=".">
-                                {inputs.categoryName}
-                              </Link>
+                              <Link to=".">{inputs.categoryName}</Link>
                             </li>
                             <li
                               className="breadcrumb-item active"
@@ -8340,63 +8344,79 @@ function Layouts() {
                 </div>
                 <div className="col-lg-5 col-12">
                   <center>
-            <Fragment>
-  <div onMouseLeave={leavetooltip} onMouseEnter={entertooltip} id="mapcolor">
-    <ComposableMap projectionConfig={{ scale }} width={299} height={500}>
-      <ZoomableGroup zoom={4.4} center={[78.25, 10.8]} disablePanning>
-        <Geographies geography={MAP_JSON}>
-          {({ geographies }) =>
-            geographies.map((geography, i) => (
-              <Geography
-                key={geography.properties.NAME}
-                id={geography.properties.district}
-                onClick={() => getdistict(`${geography.properties.district}`)}
-                data-tooltip-id="map-tooltip"
-                data-tooltip-content={`${
-                  localStorage.getItem("language") === "Tamil"
-                    ? geography.properties.tamildistrict
-                    : geography.properties.district
-                }`}
-                data-tooltip-index={i}
-                geography={geography}
-                precision={0.5}
-                style={{
-                  default: STYLES_MAP1.default,
-                  hover: STYLES_MAP1.hover,
-                  pressed: STYLES_MAP1.pressed,
-                  active1: STYLES_MAP1.active1,
-                }}
-              />
-            ))
-          }
-        </Geographies>
+                    <Fragment>
+                      <div
+                        onMouseLeave={leavetooltip}
+                        onMouseEnter={entertooltip}
+                        id="mapcolor"
+                      >
+                        <ComposableMap
+                          projectionConfig={{ scale }}
+                          width={299}
+                          height={500}
+                        >
+                          <ZoomableGroup
+                            zoom={4.4}
+                            center={[78.25, 10.8]}
+                            disablePanning
+                          >
+                            <Geographies geography={MAP_JSON}>
+                              {({ geographies }) =>
+                                geographies.map((geography, i) => (
+                                  <Geography
+                                    key={geography.properties.NAME}
+                                    id={geography.properties.district}
+                                    onClick={() =>
+                                      getdistict(
+                                        `${geography.properties.district}`
+                                      )
+                                    }
+                                    data-tooltip-id="map-tooltip"
+                                    data-tooltip-content={`${
+                                      localStorage.getItem("language") ===
+                                      "Tamil"
+                                        ? geography.properties.tamildistrict
+                                        : geography.properties.district
+                                    }`}
+                                    data-tooltip-index={i}
+                                    geography={geography}
+                                    precision={0.5}
+                                    style={{
+                                      default: STYLES_MAP1.default,
+                                      hover: STYLES_MAP1.hover,
+                                      pressed: STYLES_MAP1.pressed,
+                                      active1: STYLES_MAP1.active1,
+                                    }}
+                                  />
+                                ))
+                              }
+                            </Geographies>
 
-        <Annotation
-          subject={pointdistrict}
-          dx={-0}
-          dy={-0}
-          connectorProps={{
-            stroke: "#000",
-            strokeWidth: 3,
-            strokeLinecap: "round",
-          }}
-        >
-          <text
-            x="-1"
-            textAnchor="end"
-            alignmentBaseline="middle"
-            fill="#F53"
-            style={{ fontSize: "4px" }}
-          ></text>
-        </Annotation>
-      </ZoomableGroup>
-    </ComposableMap>
+                            <Annotation
+                              subject={pointdistrict}
+                              dx={-0}
+                              dy={-0}
+                              connectorProps={{
+                                stroke: "#000",
+                                strokeWidth: 3,
+                                strokeLinecap: "round",
+                              }}
+                            >
+                              <text
+                                x="-1"
+                                textAnchor="end"
+                                alignmentBaseline="middle"
+                                fill="#F53"
+                                style={{ fontSize: "4px" }}
+                              ></text>
+                            </Annotation>
+                          </ZoomableGroup>
+                        </ComposableMap>
 
-    {/* ✅ Updated Tooltip for react-tooltip v5 */}
-    {tooltipfunction && <Tooltip id="map-tooltip" />}
-  </div>
-</Fragment>
-
+                        {/* ✅ Updated Tooltip for react-tooltip v5 */}
+                        {tooltipfunction && <Tooltip id="map-tooltip" />}
+                      </div>
+                    </Fragment>
                   </center>
                 </div>
               </div>
